@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="build/js/vendor.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/main.css">
+    <script src="build/js/app.js" charset="utf-8"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
 
+<!-- This is where the banners of searchable houses are displayed -->
+    <div class="banner-holder">
+      <div class="stark banner" id="show-stark">
+      </div>
+      <div class="lannister banner" id="show-lannister">
+      </div>
+      <div class="baratheon banner" id="show-baratheon">
+      </div>
+      <div class="greyjoy banner" id="show-greyjoy">
+      </div>
+      <div class="targaryen banner" id="show-targaryen">
+      </div>
+    </div>
+
+    <div class="bo-flex">
+<!-- This is where those characters loyal to the selected house will be listed -->
+      <div class="house-holder">
+        <ul class="house-members"></ul>
+      </div>
+
+<!-- This is where information about the selected character will be displayed -->
+      <div class="character-info">
+        <div class="portrait"></div>
+        <div class="name"></div>
+        <div class="titles"></div>
+        <div class="aliases"></div>
+        <div class="relationships"></div>
+        <div class="father"></div>
+        <div class="mother"></div>
+        <div class="spouse"></div>
+        <div class="other allegiances"></div>
+      </div>
+    </div>
   </body>
 </html>

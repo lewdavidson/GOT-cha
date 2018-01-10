@@ -1,0 +1,31 @@
+.banner-holder{
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  height: 15vh;
+  padding: 10px 5px;
+}
+
+.banner{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: auto;
+  margin: 0 5px;
+  cursor: pointer;
+  &.stark{
+    background-image: url('./../../img/stark.png');
+  }
+  &.baratheon{
+    background-image: url('./../../img/baratheon.png');
+  }
+  &.lannister{
+    background-image: url('./../../img/lannister.png');
+  }
+  &.greyjoy{
+    background-image: url('./../../img/greyjoy.png');
+  }
+  &.targaryen{
+    background-image: url('./../../img/targaryen.png');
+  }
+}
