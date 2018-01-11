@@ -1,23 +1,30 @@
+export class House{
+  constructor(){
+    this.members = [];
+  }
 
-export function getHouse( houseName, renderCallback){
-  const url = `https://www.anapioficeandfire.com/api/house`;
-  const houseQuery = `?${houseName}`;
-  $.get( url + houseQuery )
-    .then(function(results) {
-      const charLinks = results.swornMembers;
-      const output = [];
-      charLinks.forEach((link) => {
-        query api for character object
-        push object to character array
-
+  getHouse( houseName, renderCallback){
+    const url = `https://www.anapioficeandfire.com/api/houses?`;
+    const houseQuery = `name=${houseName}`;
+    $.get( url + houseQuery )
+      .then((results) => {
+        console.log('successful house query!');
+        const charLinks = results[0].swornMembers;
+        const outputArray = charLinks;
+        // charLinks.forEach((link) => {
+        //   // query api for character object
+        //   // push object to character array
+        //
+        // });
+        renderCallback(outputArray);
+      })
+      .fail(function(){
+        console.log('House query failure!');
       });
-      renderCallback(output);
-    });
-    .fail(function(){
+  }
 
-    });
+  //function getCharacter(charName, renderCallback){
+  //   const url = `https://www.anapioficeandfire.com/api/character`;
+  //   const charQuery = `?${charName}`
+
 }
-
-export function getCharacter(charName, renderCallback){
-  const url = `https://www.anapioficeandfire.com/api/character`;
-  const charQuery = `?${charName}`
