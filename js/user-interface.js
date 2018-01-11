@@ -5,6 +5,7 @@ $(document).ready(function () {
   document.addEventListener('click', function(event) {
     if (event.target.id === 'show-stark'){
       showHouseMembers( ourHouse,`House Stark of Winterfell`);
+      console.log(ourHouse.members);
     } else if (event.target.id === 'show-lannister'){
       showHouseMembers( ourHouse,`House Lannister of Casterly Rock`);
     } else if (event.target.id === 'show-baratheon'){
@@ -15,6 +16,12 @@ $(document).ready(function () {
       showHouseMembers( ourHouse,`House Targaryen of King's Landing`);
     }
   });
+  $('.house-members').on('click', function(event) {
+    let name = $(event.target).text();
+    let thisChar = ourHouse.members.find((character) => character.name === name);
+    console.log(thisChar.name);
+    showCharacter(thisChar);
+  });
 });
 
 function renderCharacterName(characterObject){
@@ -24,4 +31,10 @@ function renderCharacterName(characterObject){
 function showHouseMembers(houseObject, housename){
   $('.house-members').empty();
   houseObject.getHouse(housename, renderCharacterName);
+}
+
+function showCharacter(character){
+  $('.name').text(character.name);
+  $('.titles').text(character.titles);
+  $('.aliases').text(character.aliases);
 }
