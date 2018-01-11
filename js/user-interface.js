@@ -20,11 +20,11 @@ $(document).ready(function () {
 function renderCallback(characterArray){
   console.log(characterArray);
   characterArray.forEach((character) => {
-    $('.house-members').append(`<li>${character}</li>`);
+    $('.house-members').append(`<li>${character.name}</li>`);
   });
 }
 
 function showHouseMembers(houseObject, housename){
   $('.house-members').empty();
   houseObject.getHouse(housename, renderCallback);
-};
+}
