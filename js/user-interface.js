@@ -17,14 +17,11 @@ $(document).ready(function () {
   });
 });
 
-function renderCallback(characterArray){
-  console.log(characterArray);
-  characterArray.forEach((character) => {
-    $('.house-members').append(`<li>${character.name}</li>`);
-  });
+function renderCharacterName(characterObject){
+  $('.house-members').append(`<li>${characterObject.name}</li>`);
 }
 
 function showHouseMembers(houseObject, housename){
   $('.house-members').empty();
-  houseObject.getHouse(housename, renderCallback);
+  houseObject.getHouse(housename, renderCharacterName);
 }

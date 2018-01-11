@@ -33,34 +33,31 @@ export class House{
     const url = `https://www.anapioficeandfire.com/api/houses?`;
     const houseQuery = `name=${houseName}`;
     $.get( url + houseQuery )
-      .then((results) => {
+      .then((result) => {
         console.log('successful house query!');
-        const charLinks = results[0].swornMembers;
-        const outputArray = [];
+        const charLinks = result[0].swornMembers;
         charLinks.forEach((link) => {
-          let character = this.getCharacter(link);
-          console.log(character);
-          outputArray.push(character);
+          this.getCharacter(link, renderCallback);
         });
-
       })
       .fail(function(){
           console.log('House query failure!');
       });
   }
 
-  getCharacter(charLink){
+  getCharacter(charLink, renderCharacterName){
     const url = charLink;
 
     $.get( url )
       .then((result) => {
-        console.log(result.name);
+        // console.log(result.name);
         const character = result;
-        return character;
+        renderCharacterName(character);
       })
       .fail(() => {
         console.log('Character query failure');
-        return {"name": "character not found"};
+        const failObj = {"name": "character not found"};
+        renderCharacterName(failObj);
       });
   }
 
