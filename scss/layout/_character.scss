@@ -1,4 +1,15 @@
-.character-info{
-  background-color: honeydew;
+.character-info {
+  padding: 15px;
   width: 80vw;
+  display: none;
+  font-family: 'Macondo', cursive;
+  color:#8A0F0F;
+  h2 {
+    font-size: 3em;
+    font-style: italic;;
+  }
+  div {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
 }

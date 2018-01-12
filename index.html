@@ -5,10 +5,18 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/main.css">
     <script src="build/js/app.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
     <meta charset="utf-8">
-    <title></title>
+      <audio autoplay loop>
+      <source src="Game of Thrones.mp3">
+      </audio>
+    <title>GAME OF THRONES, GIRL</title>
   </head>
   <body>
+    <div class="top-bar">
+      <h2>The Game of Thrones Character Catalogue</h2>
+      <p>Choose your desired house to see its members!</p>
+    </div>
 
 <!-- This is where the banners of searchable houses are displayed -->
     <div class="banner-holder">
@@ -32,15 +40,14 @@
 
 <!-- This is where information about the selected character will be displayed -->
       <div class="character-info">
-        <div class="portrait"></div>
+        <h2>Name: </h2>
         <div class="name"></div>
+        <h2>Titles:</h2>
         <div class="titles"></div>
+        <h2>Aliases:</h2>
         <div class="aliases"></div>
-        <div class="relationships"></div>
-        <div class="father"></div>
-        <div class="mother"></div>
-        <div class="spouse"></div>
-        <div class="other allegiances"></div>
+        <h2>Relationships:</h2>
+        <ul class="relationships"></ul>
       </div>
     </div>
   </body>

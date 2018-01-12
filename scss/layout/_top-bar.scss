@@ -1,0 +1,14 @@
+.top-bar {
+  font-family: 'Macondo', cursive;
+  text-align: center;
+  background-color: black;
+  font-size: 1.5em;
+  padding: 15px;
+  color: #8A0F0F;
+  h2 {
+    margin-top: 0;
+  }
+  & p{
+    margin: 0;
+  }
+}

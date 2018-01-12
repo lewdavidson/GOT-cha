@@ -1,5 +1,8 @@
 .bo-flex{
   display: flex;
   min-height: 85vh;
-  background-color: peachpuff;
+  background-image: url("../../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5)
 }

@@ -34,6 +34,7 @@ function showHouseMembers(houseObject, housename){
 }
 
 function showCharacter(character){
+  $('.character-info').show();
   $('.name').text(character.name);
   $('.titles').text(character.titles);
   $('.aliases').text(character.aliases);
